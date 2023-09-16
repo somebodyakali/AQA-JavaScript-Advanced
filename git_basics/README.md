@@ -1,1 +1,1 @@
-# This is a README file for my commit
+# This is a README file for the commit
