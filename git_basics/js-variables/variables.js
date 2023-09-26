@@ -6,7 +6,7 @@ let userName = 'User';
 console.log(typeof adminName, typeof userName);
 
 // Оголосіть та присвойте змінній значення "awesome".
-let awesome = true;
+let yourVariableName  = 'awesome';
 
 // Потім оголосіть ще 2 змінних та присвойте їм довільні значення. 
 let firstVariable = 'not very fun but';
