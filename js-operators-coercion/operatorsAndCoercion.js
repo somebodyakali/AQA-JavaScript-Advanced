@@ -12,8 +12,8 @@ console.log(isPersonAllowed);
 Використовуючи конкатенацію рядків, створіть третю змінну, яка містить вітання для обох осіб. Виведіть результат в консоль.
 Базуючись на результаті всіх змінних зробіть конкантенацію всіх рядків (4 змінна, або просто обєднати у консоль лозі все) і виведіть результат у консоль. */
 
-let nameOne = 'Olena';
-let nameTwo = 'Serhiy';
+let nameOne = "Olena";
+let nameTwo = "Serhiy";
 
 let greeting = `Hi ${nameOne} and ${nameTwo}!`;
 console.log(greeting);
