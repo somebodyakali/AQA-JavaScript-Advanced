@@ -95,14 +95,13 @@ switch (currentMonth){
 
 const number = 30;
 
-for(n = 0; n<30; n++){
-    if(n==0 || n==22){
+for(n = 0; n<=30; n++){
+    if(n % 2 !== 0 || n==0 || n==22){
         continue
     }
-    if(n % 2 == 0){
         console.log(n)
-    } 
 };
+
 
 // 4.У вас є два числа numberA, numer B присвойте їм значення. 
 // За допомогою тернарного оператора виведіть число яке більше.
