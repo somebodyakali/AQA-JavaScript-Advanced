@@ -167,13 +167,7 @@ b) Дано масив
 // a)
 
 const array = [1, 8, 10, 11, -8, 17, 20, 22, 40, 37, 45, 0, 3, 45, 56]
-const onlyOdds = array.filter(checkNumber);
-
-function checkNumber(num) {
-  if(num % 2 !== 0){
-    return num
-  }
-};
+const onlyOdds = array.filter((checkNumber) => checkNumber % 2 !== 0)
 
 console.log(onlyOdds);
 
