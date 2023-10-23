@@ -12,28 +12,27 @@
 
 // Function declaration
 
-function addNumbers(num1,num2){
+function addNumbers(num1, num2) {
     let result = num1 > num2 ? num1 : num2
     return result
-};
+}
 
-console.log(addNumbers(5,2));
+console.log(addNumbers(5, 2))
 
 // Function expression
 
-const returnBigger = function(num3,num4){
+const returnBigger = function (num3, num4) {
     let biggernum1 = num3 > num4 ? num3 : num4
     return `The bigger one is: ${biggernum1}`
-};
+}
 
-console.log(returnBigger(3,1));
-
+console.log(returnBigger(3, 1))
 
 // Arrow function
 
-const arrowCompare = (num5, num6) => num5 > num6 ? num5 : num6;
+const arrowCompare = (num5, num6) => (num5 > num6 ? num5 : num6)
 
-console.log(arrowCompare(5,10));
+console.log(arrowCompare(5, 10))
 
 /* Таск 2.
 
@@ -49,15 +48,15 @@ console.log(arrowCompare(5,10));
 
 */
 
-function recursiveOne(value){
+function recursiveOne(value) {
     console.log(value)
     value++
-    if(value < 21){    
+    if (value < 21) {
         recursiveOne(value)
     }
-};
+}
 
-recursiveOne(2);
+recursiveOne(2)
 
 /*
 Tacк 3.
@@ -70,29 +69,32 @@ let nestedArray = [["apple", "banana", "dog"],["cherry", "cat", "elephant"],["re
 Результат виведіть в консоль.
 */
 
-let nestedArray = [["apple", "banana", "dog"],["cherry", "cat", "elephant"],["red", "green", "cat"]];
+let nestedArray = [
+    ['apple', 'banana', 'dog'],
+    ['cherry', 'cat', 'elephant'],
+    ['red', 'green', 'cat'],
+]
 
-function iterateArr(arr){
+function iterateArr(arr) {
     let catFound = false
-    for(elem in arr){
-        for(i of arr[elem]){
-            if(i == "cat"){
+    for (elem in arr) {
+        for (i of arr[elem]) {
+            if (i == 'cat') {
                 catFound = true
                 console.log(i)
-            } else{
+            } else {
                 console.log(i)
             }
-            
         }
     }
-    if(catFound == true){
-        console.log("A cat was found in the array! ≽^•⩊•^≼")
+    if (catFound == true) {
+        console.log('A cat was found in the array! ≽^•⩊•^≼')
     } else {
-        console.log("There is no cat in the array :(")
+        console.log('There is no cat in the array :(')
     }
-};
+}
 
-iterateArr(nestedArray);
+iterateArr(nestedArray)
 
 /*
 Таск4.
@@ -114,41 +116,44 @@ iterateArr(nestedArray);
 
 function divideArray(numbers) {
     try {
-      if (numbers.length < 2) {
-        throw new Error("Please put at least 2 numbers");
-      }
-  
-      const result = [];
-      for (let i = 1; i < numbers.length; i++) {
-        if (typeof numbers[i - 1] !== 'number' || typeof numbers[i] !== 'number' || numbers[i - 1] === 0) {
-          throw new Error("Wrong data type or division involes 0");
+        if (numbers.length < 2) {
+            throw new Error('Please put at least 2 numbers')
         }
-        result.push(numbers[i] / numbers[i - 1]);
-      }
-  
-      return result;
 
+        const result = []
+        for (let i = 1; i < numbers.length; i++) {
+            if (
+                typeof numbers[i - 1] !== 'number' ||
+                typeof numbers[i] !== 'number' ||
+                numbers[i - 1] === 0
+            ) {
+                throw new Error('Wrong data type or division involes 0')
+            }
+            result.push(numbers[i] / numbers[i - 1])
+        }
+
+        return result
     } catch (error) {
-      console.error(error.message);
-      return []
+        console.error(error.message)
+        return []
     } finally {
-      console.log("Processing done");
+        console.log('Processing done')
     }
-  };
+}
 
-const arr1 = [8, 16, 32, 64, 128];
-const arr2 = [2, 4, 0, 8, 16];
-const arr3 = [10, 5, 'qwe', 2];
-const arr4 = [5];
-const arr5 = [];
-const arr6 = [5,10,15,20,25];
+const arr1 = [8, 16, 32, 64, 128]
+const arr2 = [2, 4, 0, 8, 16]
+const arr3 = [10, 5, 'qwe', 2]
+const arr4 = [5]
+const arr5 = []
+const arr6 = [5, 10, 15, 20, 25]
 
-console.log(divideArray(arr1));
-console.log(divideArray(arr2));
-console.log(divideArray(arr3));
-console.log(divideArray(arr4));
-console.log(divideArray(arr5));
-console.log(divideArray(arr6));
+console.log(divideArray(arr1))
+console.log(divideArray(arr2))
+console.log(divideArray(arr3))
+console.log(divideArray(arr4))
+console.log(divideArray(arr5))
+console.log(divideArray(arr6))
 
 /*
 Таск 5.
@@ -169,15 +174,15 @@ b) Дано масив
 const array = [1, 8, 10, 11, -8, 17, 20, 22, 40, 37, 45, 0, 3, 45, 56]
 const onlyOdds = array.filter((checkNumber) => checkNumber % 2 !== 0)
 
-console.log(onlyOdds);
+console.log(onlyOdds)
 
 // b)
 
-const arrayColors = ["yellow", "green", "apple", "red", "pink"];
+const arrayColors = ['yellow', 'green', 'apple', 'red', 'pink']
 
-arrayColors.sort();
+arrayColors.sort()
 
-console.log(arrayColors);
+console.log(arrayColors)
 
 /*
 Таск 6.
@@ -191,12 +196,12 @@ console.log(arrayColors);
 Виведіть отриманий об'єднаний масив на консоль.
 */
 
-const array1 = [10, 20, 30];
-const array2 = [40, 50, 60];
+const array1 = [10, 20, 30]
+const array2 = [40, 50, 60]
 
-const mergedArray1 = array1.concat(array2);
+const mergedArray1 = array1.concat(array2)
 
-console.log(mergedArray1);
+console.log(mergedArray1)
 
 /*
 Таск 7.
@@ -210,8 +215,11 @@ console.log(mergedArray1);
 Виведіть отриману суму на консоль.
 */
 
-const numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 40, 50]
 
-const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0,
+)
 
-console.log(sum); 
+console.log(sum)
