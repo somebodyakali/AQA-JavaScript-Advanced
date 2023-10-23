@@ -18,19 +18,19 @@ preferences - обєкт, який буде представляти що нео
 
 Виведіть обєкт automationQA у консоль. */
 
-const automationQA = {};
+const automationQA = {}
 
-automationQA.programmerName = "Jack"
-automationQA["programmingLanguage"] = "JavaScript"
+automationQA.programmerName = 'Jack'
+automationQA['programmingLanguage'] = 'JavaScript'
 automationQA.age = 15
-automationQA["languages"] = ["English", "Ukrainian"]
+automationQA['languages'] = ['English', 'Ukrainian']
 automationQA.preferences = {
-    "devices": ["laptop","phone","mouse"],
-    "food":["apples","bananas"],
-    "money":["salary","raise"]
-};
+    devices: ['laptop', 'phone', 'mouse'],
+    food: ['apples', 'bananas'],
+    money: ['salary', 'raise'],
+}
 
-console.log(automationQA);
+console.log(automationQA)
 
 /* 
 2.Tаск 2
@@ -49,13 +49,13 @@ window - булеве значення. // true/false.
 */
 
 const room = {
-    name : "living room",
-    size: "1m^2",
+    name: 'living room',
+    size: '1m^2',
     window: true,
-};
+}
 
-console.log(room["name"]);
-console.log(room["window"]);
+console.log(room['name'])
+console.log(room['window'])
 
 /*
 3.Таск 3
@@ -77,23 +77,23 @@ genre - стрінга, має містити жанр.
 */
 
 const movie = {
-    title: "Titanic",
+    title: 'Titanic',
     releaseYear: 1997,
-    genre: "drama"
-};
+    genre: 'drama',
+}
 
-console.log(movie);
+console.log(movie)
 
-movie["genre"] = "action";
-movie["title"] = "Nightcrawler";
-movie["actors"] = { 
-    mainRole: "Jake Gyllenhaal",
-    director: "Dan Gilroy"
-};
+movie['genre'] = 'action'
+movie['title'] = 'Nightcrawler'
+movie['actors'] = {
+    mainRole: 'Jake Gyllenhaal',
+    director: 'Dan Gilroy',
+}
 
-delete movie["title"];
+delete movie['title']
 
-console.log(movie);
+console.log(movie)
 
 /*
 4.Таск 4
@@ -128,51 +128,50 @@ const englishBooks = [
 
 const englishBooks = [
     {
-        title: "To Kill a Mockingbird",
-        author: "Harper Lee",
-        year: 1960
+        title: 'To Kill a Mockingbird',
+        author: 'Harper Lee',
+        year: 1960,
     },
     {
-        title: "1984",
-        author: "George Orwell",
-        year: 1949
+        title: '1984',
+        author: 'George Orwell',
+        year: 1949,
     },
     {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        year: 1925
-    }
-];
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        year: 1925,
+    },
+]
 
 // Пройдіться циклом по масиву обєктів.
 
 const iterateObj = (obj) => {
     for (const key in obj) {
-        console.log(`${key}: ${obj[key]}`);
+        console.log(`${key}: ${obj[key]}`)
     }
-};
+}
 
 for (const book of englishBooks) {
-
     // Якщо title буде “The Great Gatsby” то пропустіть виконання ітерації.
-    if(book.title === "The Great Gatsby"){
+    if (book.title === 'The Great Gatsby') {
         continue
-    } 
+    }
 
     // Якщо year буде більше ніж 1940, то виведіть у консоль значення ключа та властивості.
     if (book.year > 1940) {
-        iterateObj(book);
+        iterateObj(book)
     }
 
     // Якщо author “George Orwell” то замініть його на довільне значення.
-    if (book.author === "George Orwell") {
-        book.author = "Bernard Shaw"; 
+    if (book.author === 'George Orwell') {
+        book.author = 'Bernard Shaw'
     }
-};
+}
 
 for (const book of englishBooks) {
     console.log(book)
-};
+}
 
 /*
 Створіть вкладений об'єкт(обєкт у середині якого є ще один обєкт) з довільними властивостями.
@@ -180,25 +179,25 @@ for (const book of englishBooks) {
 */
 
 let myNestedCard = {
-    bank : "monobank",
-    number : 1234,
+    bank: 'monobank',
+    number: 1234,
     fraud: false,
     security: {
         cvv: 123,
         epxdate: 162012,
-        secretinfo: "abc"
-    }
-};
+        secretinfo: 'abc',
+    },
+}
 
 for (const key in myNestedCard) {
-    if (typeof myNestedCard[key] === "object") {
+    if (typeof myNestedCard[key] === 'object') {
         for (const nestedKey in myNestedCard[key]) {
-            console.log(`${key}.${nestedKey}: ${myNestedCard[key][nestedKey]}`);
+            console.log(`${key}.${nestedKey}: ${myNestedCard[key][nestedKey]}`)
         }
     } else {
-        console.log(`${key}: ${myNestedCard[key]}`);
+        console.log(`${key}: ${myNestedCard[key]}`)
     }
-};
+}
 
 /*
 6.Таск 6
@@ -216,38 +215,40 @@ for (const key in myNestedCard) {
 */
 
 user = {
-    name: "NewUser",
+    name: 'NewUser',
     age: 7,
-    email: "abc@gmail.com",
+    email: 'abc@gmail.com',
     address: {
-        street: "Abc",
-        city: "Def",
-        postcode: "AAA111",
-        state: "Obs"
-    }
-};
+        street: 'Abc',
+        city: 'Def',
+        postcode: 'AAA111',
+        state: 'Obs',
+    },
+}
 
 // Створіть функцію getUserInfo, яка приймає об'єкт користувача в якості параметру та використовує деструктуризацію для отримання name, age користувача
-function getUserInfo(obj){
+function getUserInfo(obj) {
     const { name, age } = obj
     return { name, age }
-};
+}
 
-console.log(getUserInfo(user));
+console.log(getUserInfo(user))
 
 /*
 Створіть функцію getFullAddress, яка приймає об'єкт користувача в якості параметру та використовує деструктуризацію для отримання емейлу, міста та поштового коду користувача. 
 Наприклад: address: { city, postalCode }
 */
 
-function getFullAddress(){
+function getFullAddress() {
     console.log('abc')
-};
+}
 
 function getFullAddress(user) {
-    const { email, address: { town: city, postcode: postalCode } } = user;
-    return { email, city, postalCode };
-};
+    const {
+        email,
+        address: { town: city, postcode: postalCode },
+    } = user
+    return { email, city, postalCode }
+}
 
-console.log(getFullAddress(user));
-
+console.log(getFullAddress(user))
